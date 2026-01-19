@@ -5,20 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-     <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#5B2D8B',
-            secondary: '#FF7426',
-            cream: '#FFF9F2',
-            muted: '#6B7280'
-          }
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5B2D8B',
+                        secondary: '#FF7426',
+                        cream: '#FFF9F2',
+                        muted: '#6B7280'
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
     <link rel="icon" href="logo (1).png" />
     <title>Book Store</title>
     <style>
@@ -30,26 +30,67 @@
 </head>
 
 <body>
-    <header>
-        <div class="max-w-[1280px] mx-auto py-4 px-8 flex items-center gap-[40px]">
-            <nav class="flex-1 flex items-center justify-between">
-                <div class="text-[24px] font-bold flex items-center gap-2">
-                    <i>
-                        <img class="h-[52px] w-[59px]" src="logo (1).png" alt="icon" />
-                    </i>
-                    Book Store
-                </div>
-                <ul class="hidden md:flex gap-[24px] font-bold">
-                    <i> <a href="#">Home</a></i>
-                    <i> <a href="#">About</a></i>
-                    <i> <a href="#">Courses</a></i>
-                    <i> <a href="#">Our Services</a></i>
-                    <i> <a href="#">Contact</a></i>
-                </ul>
-            </nav>
-            <a href="#" class="py-[16px] px-[32px] bg-[#4d2c5e] text-white rounded-[32px]">Login</a>
+<header>
+  <div class="max-w-[1280px] mx-auto py-4 px-4 md:px-8 flex items-center gap-4 md:gap-[40px]">
+
+    <!-- Logo + Nav -->
+    <nav class="flex-1 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-[20px] md:text-[24px] font-bold flex items-center gap-2">
+        <img class="h-[40px] w-[46px] md:h-[52px] md:w-[59px]" src="logo (1).png" alt="icon" />
+        Book Store
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-[24px] font-bold">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Login Button -->
+      <a
+        href="#"
+        class="py-2 md:py-[16px] px-4 md:px-[32px] bg-[#4d2c5e] text-white rounded-[32px] text-sm md:text-base"
+      >
+        Login
+      </a>
+
+      <!-- Hamburger Toggle (Checkbox Hack) -->
+      <div class="md:hidden">
+        <input type="checkbox" id="menuToggle" class="peer hidden" />
+
+        <!-- Hamburger Icon -->
+        <label
+          for="menuToggle"
+          class="flex flex-col justify-center items-center w-10 h-10 rounded-lg border border-gray-300 cursor-pointer"
+        >
+          <span class="w-6 h-0.5 bg-gray-800 mb-1"></span>
+          <span class="w-6 h-0.5 bg-gray-800 mb-1"></span>
+          <span class="w-6 h-0.5 bg-gray-800"></span>
+        </label>
+
+        <!-- Mobile Menu -->
+        <div
+          class="absolute left-0 top-[72px] w-full bg-white shadow-md hidden peer-checked:block"
+        >
+          <ul class="flex flex-col gap-4 font-bold px-6 py-4">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
-    </header>
+      </div>
+    </div>
+  </div>
+</header>
 
     <section id="hero">
         <div class="flex gap-10 items-center max-w-[1280px] px-8 py-[100px] bg-contain bg-no-repeat bg-bottom"
@@ -78,7 +119,8 @@
     </section>
 
     <section class="max-w[1280px]">
-        <div class="border bg-[#4d2c5e] rounded-[10px] px-8 py-16 w-[90%] mx-auto grid md:grid-cols-3 gap-10 -mb-[150px] relative z-10">
+        <div
+            class="border bg-[#4d2c5e] rounded-[10px] px-8 py-16 w-[90%] mx-auto grid md:grid-cols-3 gap-10 -mb-[150px] relative z-10">
             <div class="flex gap-4 items-start">
                 <div class="p-4 w-fit shrink-0 rounded-[16px] border bg-gray-100">
                     <img src="/icon/online-test 1.png" alt="icon" class="w-10 h-10" />
@@ -137,39 +179,39 @@
                     <div class="h-[200px] border bg-cover bg-no-repeat bg-center border rounded-[16px]" style="
                 background-image: url('/images/little-girl-participating-online-classes\ 1.png');
               ">
-            </div>
+                    </div>
                     <p class="text-gray-400">UI/UX Design</p>
                     <h3 class="text-[24px] font-bold">UI/UX Design for Beginners</h3>
                     <p class="text-[#FF7426] font-bold">$89</p>
                     <button class="mt-15 bg-secondary text-white px-4 py-2 rounded-full text-sm justify-center">
-        Join Course
-      </button>
+                        Join Course
+                    </button>
                     <div class="border-top border-dotted"></div>
                 </div>
                 <div class="py-4 pt-0 shadow-lg rounded-[16px]">
                     <div class="h-[200px] border bg-cover bg-no-repeat bg-center border rounded-[16px]" style="
                 background-image: url('/images/image\ 7.png');
               ">
-            </div>
+                    </div>
                     <p class="text-gray-400">UI/UX Design</p>
                     <h3 class="text-[24px] font-bold">UI/UX Design for Beginners</h3>
                     <p class="text-[#FF7426] font-bold">$89</p>
                     <button class="mt-15 bg-secondary text-white px-4 py-2 rounded-full text-sm content-center">
-        Join Course
-      </button>
+                        Join Course
+                    </button>
                     <div class="border-top border-dotted"></div>
                 </div>
                 <div class="py-4 pt-0 shadow-lg rounded-[16px]">
                     <div class="h-[200px] border bg-cover bg-no-repeat bg-center border rounded-[16px]" style="
                 background-image: url('/images/image\ 6.png');
               ">
-            </div>
+                    </div>
                     <p class="text-gray-400">UI/UX Design</p>
                     <h3 class="text-[24px] font-bold">UI/UX Design for Beginners</h3>
                     <p class="text-[#FF7426] font-bold">$89</p>
                     <button class="mt-15 bg-secondary text-white px-4 py-2 rounded-full text-sm justify-center">
-        Join Course
-      </button>
+                        Join Course
+                    </button>
                     <div class="border-top border-dotted"></div>
                 </div>
             </div>
@@ -179,57 +221,76 @@
     </section>
 
 
-<!-- PREMIUM LEARNING -->
-<section class="max-w-[1280px] mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10 content-center">
-    <div>
-        <img src="/illustration/OBJECTS.png" alt="learning" class="w-full mx-auto hidden md:block" />
-    </div>
-  
-  <div>
-    <h2 class="text-[59px] font-bold mb-6 md:wrap-break-word">
-      Premium <span class="text-[#FF7426]">Learning</span> <br>
-       Experience
-    </h2>
+    <!-- PREMIUM LEARNING -->
+    <section class="max-w-[1280px] mx-auto px-4 py-12 md:py-16 grid lg:grid-cols-2 gap-10 content-center">
 
-    <div class="space-y-10 max-w-xl mx-auto lg:mx-0">
-            <div class="flex items-start gap-6">
-              <div class="shrink-0 w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl">
-                <img src="/icon/hearts 1.png" alt="icon">
-              </div>
-              <div>
-                <h4 class="text-2xl font-semibold mb-3">Easily Accessible</h4>
-                <p class="text-gray-700 leading-relaxed">
-                  Learning will feel very comfortable with Courselab.
-                </p>
-              </div>
+        <!-- Image -->
+        <div class="flex justify-center">
+            <img src="/illustration/OBJECTS.png" alt="learning" class="w-full max-w-md mx-auto hidden md:block" />
+        </div>
+
+        <!-- Content -->
+        <div class="text-center lg:text-left">
+
+            <!-- Heading -->
+            <h2 class="text-[28px] sm:text-[34px] md:text-[30px] lg:text-[59px] font-bold mb-6 leading-tight">
+                Premium <span class="text-[#FF7426]">Learning</span><br>
+                Experience
+            </h2>
+
+            <!-- Feature List -->
+            <div class="space-y-8 max-w-xl mx-auto lg:mx-0">
+
+                <!-- Item 1 -->
+                <div
+                    class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left">
+                    <div
+                        class="shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-purple-100 rounded-2xl flex items-center justify-center">
+                        <img src="/icon/hearts 1.png" alt="icon" class="w-8 h-8">
+                    </div>
+                    <div>
+                        <h4 class="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">
+                            Easily Accessible
+                        </h4>
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+                            Learning will feel very comfortable with Courselab.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div
+                    class="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left">
+                    <div
+                        class="shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-pink-100 rounded-2xl flex items-center justify-center">
+                        <img src="/icon/jigsaw 1.png" alt="icon" class="w-8 h-8">
+                    </div>
+                    <div>
+                        <h4 class="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">
+                            Fun Learning Experience
+                        </h4>
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+                            Learning will feel very comfortable with Courselab.
+                        </p>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <div class="flex items-start gap-6">
-              <div class="shrink-0 w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center text-3xl">
-                <img src="/icon/jigsaw 1.png" alt="icon">
-              </div>
-              <div>
-                <h4 class="text-2xl font-semibold mb-3">Fun Learning Experience</h4>
-                <p class="text-gray-700 leading-relaxed">
-                  Learning will feel very comfortable with Courselab.
-                </p>
-              </div>
-            </div>
-          </div>
-  </div>
-</section>
 
-<!-- What Student's Say Section -->
+    <!-- What Student's Say Section -->
     <section class="bg-white-500 py-12 md:py-16">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-[#050C26] mb-2">What Student’s Say</h2>
             <p class="text-center text-[#8A8A8A] mb-12">Lorem ipsum is simply dummy text of the printing.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <p class="text-[#8A8A8A] mb-4">"“Teachings of the great explore of truth, 
-the master-builder of human happiness. 
-no one rejects,dislikes, or avoids pleasure 
-itself, pleasure itself”</p>
+                    <p class="text-[#8A8A8A] mb-4">"“Teachings of the great explore of truth,
+                        the master-builder of human happiness.
+                        no one rejects,dislikes, or avoids pleasure
+                        itself, pleasure itself”</p>
                     <div class="flex justify-center items-center">
                         <img src="/images/Ellipse 34.png" alt="Finlay Kirk" class="w-10 h-10 rounded-full mr-2">
                         <p class="font-semibold text-[#353535]">Finlay Kirk</p>
@@ -237,9 +298,9 @@ itself, pleasure itself”</p>
                 </div>
                 <div class="bg-white-500 p-6 rounded-lg shadow-md text-center">
                     <p class="text-[#8A8A8A] mb-4">“Complete account of the system and
-expound the actual Contrary to popular
-belief, Lorem Ipsum is not simply 
-random text. It has roots”</p>
+                        expound the actual Contrary to popular
+                        belief, Lorem Ipsum is not simply
+                        random text. It has roots”</p>
                     <div class="flex justify-center items-center">
                         <img src="/images/Ellipse 34 (1).png" alt="Finlay Kirk" class="w-10 h-10 rounded-full mr-2">
                         <p class="font-semibold text-[#353535]">Dannette P. Cervantes</p>
@@ -247,9 +308,9 @@ random text. It has roots”</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <p class="text-[#8A8A8A] mb-4">“There are many variations of passages
- of Lorem Ipsum available, but the majority
- have suffered alteration in some form,
- by injected humour”</p>
+                        of Lorem Ipsum available, but the majority
+                        have suffered alteration in some form,
+                        by injected humour”</p>
                     <div class="flex justify-center items-center">
                         <img src="/images/Ellipse 34 (2).png" alt="Finlay Kirk" class="w-10 h-10 rounded-full mr-2">
                         <p class="font-semibold text-[#353535]">Clara R. Altman</p>
@@ -258,7 +319,7 @@ random text. It has roots”</p>
             </div>
         </div>
     </section>
-    
+
     <!-- Our Tracks Section -->
     <section class="bg-beige py-12 md:py-16">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
@@ -266,11 +327,13 @@ random text. It has roots”</p>
             <p class="text-center text-[#ACACAC] mb-12">Lorem ipsum is simply dummy text of the printing.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/elegant-young-teacher-with-brunette-hair-stylish-light-shirt-black-striped-suit-glasses-holding-writings-pen-giving-lecture 1.png" alt="Matthew E. McNatt" class="w-full h-48 object-cover">
+                    <img src="/images/elegant-young-teacher-with-brunette-hair-stylish-light-shirt-black-striped-suit-glasses-holding-writings-pen-giving-lecture 1.png"
+                        alt="Matthew E. McNatt" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-bold text-[#000000]">Matthew E. McNatt</h3>
                         <p class="text-[#868686] text-sm">Professor @George Brown College</p>
-                        <p class="text-gray-600 text-sm mt-2">Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+                        <p class="text-gray-600 text-sm mt-2">Ut enim ad minim veniam, quis nost exercitation ullamco
+                            laboris nisi ut aliquip ex commodo.</p>
                         <div class="flex justify-between items-center mt-4">
                             <p class="text-[#FF7426] font-bold">Engineering Physics</p>
                             <div class="flex space-x-2">
@@ -285,7 +348,8 @@ random text. It has roots”</p>
                     <div class="p-4">
                         <h3 class="font-bold text-[#000000]">Tracy D. Wright</h3>
                         <p class="text-[#868686] text-sm">Professor @George Brown College</p>
-                        <p class="text-gray-600 text-sm mt-2">Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+                        <p class="text-gray-600 text-sm mt-2">Ut enim ad minim veniam, quis nost exercitation ullamco
+                            laboris nisi ut aliquip ex commodo.</p>
                         <div class="flex justify-between items-center mt-4">
                             <p class="text-[#FF7426] font-bold">Engineering Physics</p>
                             <div class="flex space-x-2">
@@ -296,11 +360,13 @@ random text. It has roots”</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="images/portrait-female-teacher-white 1.png" alt="Cynthia A. Nelson" class="w-full h-48 object-cover">
+                    <img src="images/portrait-female-teacher-white 1.png" alt="Cynthia A. Nelson"
+                        class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-bold text-[#000000]">Cynthia A. Nelson</h3>
                         <p class="text-[#868686] text-sm">Professor @George Brown College</p>
-                        <p class="text-gray-600 text-sm mt-2">Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+                        <p class="text-gray-600 text-sm mt-2">Ut enim ad minim veniam, quis nost exercitation ullamco
+                            laboris nisi ut aliquip ex commodo.</p>
                         <div class="flex justify-between items-center mt-4">
                             <p class="text-[#FF7426] font-bold">Engineering Physics</p>
                             <div class="flex space-x-2">
@@ -314,74 +380,73 @@ random text. It has roots”</p>
         </div>
     </section>
 
-<!-- NEWSLETTER -->
-<section class="max-w-7xl mx-auto px-4 pb-20">
-  <div class="bg-primary rounded-[7px] p-10 text-center text-white">
-    <h3 class="text-2xl font-bold mb-4">
-      Subscribe to our newsletter
-    </h3>
+    <!-- NEWSLETTER -->
+    <section class="max-w-7xl mx-auto px-4 pb-20">
+        <div class="bg-primary rounded-[7px] p-10 text-center text-white">
+            <h3 class="text-2xl font-bold mb-4">
+                Subscribe to our newsletter
+            </h3>
 
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <input
-        type="email"
-        placeholder="Email Address"
-        class="px-5 py-3 rounded-full text-gray-900 w-full sm:w-72"
-      />
-      <button class="bg-[#FF7426] px-6 py-3 rounded-full font-semibold">
-        Send
-      </button>
-    </div>
-  </div>
-</section>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Email Address"
+                    class="px-5 py-3 rounded-full text-gray-900 w-full sm:w-72" />
+                <button class="bg-[#FF7426] px-6 py-3 rounded-full font-semibold">
+                    Send
+                </button>
+            </div>
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="bg-[#FDF8EE] py-12">
-  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-5 gap-8 text-sm text-muted">
-    <div>
-      <h4 class="font-bold text-[#1D1D1D] mb-3 flex items-center gap-2"> <img src="/logo (1).png" alt="" class="w10 h-10"> Book Store</h4>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy a type specimen book.</p>
-      
-    </div>
+    <!-- FOOTER -->
+    <footer class="bg-[#FDF8EE] py-12">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-5 gap-8 text-sm text-muted">
+            <div>
+                <h4 class="font-bold text-[#1D1D1D] mb-3 flex items-center gap-2"> <img src="/logo (1).png" alt=""
+                        class="w10 h-10"> Book Store</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy a type specimen book.</p>
 
-    
+            </div>
 
-    <div>
-      <h4 class="font-bold text-[#00052E] mb-3">Company</h4>
-      <p>About Us</p>
-      <p>How to work?</p>
-      <p>Popular Course</p>
-      <p>Service</p>
-    </div>
-    <div>
-      <h4 class="font-bold text-[#00052E] mb-3">Courses</h4>
-      <p>Categories</p>
-      <p>Ofline Course</p>
-      <p>Video Course</p>
-    </div>
 
-    <div>
-      <h4 class="font-bold text-[#00052E] mb-3">Support</h4>
-      <p>FAQ</p>
-      <p>Help Center</p>
-      <p>Career</p>
-      <p>Privacy</p>
-    </div>
 
-    <div>
-      <h4 class="font-bold mb-3 text-[#00052E]">Contact Info</h4>
-      <p>+0913-705-3875</p>
-      <p>ElizabethJ@jourrapide.com</p>
-      <p>4808 Skinner Hollow Road
-Days Creek, OR 97429</p>
-    </div>
-  </div>
-  <fieldset>
-    <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-[#606060]">
-       BookStore All Rights Reserved, © 2022
-    </div>
-  </fieldset>
-</footer>
-    
+            <div>
+                <h4 class="font-bold text-[#00052E] mb-3">Company</h4>
+                <p>About Us</p>
+                <p>How to work?</p>
+                <p>Popular Course</p>
+                <p>Service</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-[#00052E] mb-3">Courses</h4>
+                <p>Categories</p>
+                <p>Ofline Course</p>
+                <p>Video Course</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-[#00052E] mb-3">Support</h4>
+                <p>FAQ</p>
+                <p>Help Center</p>
+                <p>Career</p>
+                <p>Privacy</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-3 text-[#00052E]">Contact Info</h4>
+                <p>+0913-705-3875</p>
+                <p>ElizabethJ@jourrapide.com</p>
+                <p>4808 Skinner Hollow Road
+                    Days Creek, OR 97429</p>
+            </div>
+        </div>
+        <fieldset>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-[#606060]">
+                BookStore All Rights Reserved, © 2022
+            </div>
+        </fieldset>
+    </footer>
+
 </body>
 
 </html>
